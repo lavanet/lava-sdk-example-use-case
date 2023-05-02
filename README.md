@@ -1,4 +1,8 @@
 # lava-sdk-example-use-case
 This repo will feature a lava sdk use case 
 
-Lava SDK : https://github.com/lavanet/lava-sdk
+Lava SDK Github:       https://github.com/lavanet/lava-sdk
+Lava Github:           https://github.com/lavanet/lava
+Lava Gateway:          https://gateway.lavanet.xyz/
+Lava Official Website: https://www.lavanet.xyz/
+
