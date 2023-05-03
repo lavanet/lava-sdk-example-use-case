@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 const runAll = async () => {
   // load the .env file.
   dotenv.config()
-  if (!process.env.subscribed_consumer) {
+  if (!process.env.subscribed_consumer1) {
     throw new Error ("Add a .env file with a subscribed consumer private key")
   }
 
@@ -17,7 +17,7 @@ const runAll = async () => {
 
     // Create a lava SDK instance
     const sdkClient  = await new LavaSDK({
-      privateKey: process.env.subscribed_consumer,
+      privateKey: process.env.subscribed_consumer1,
       chainID: `${choice}`, // chainID for abci_info query
       geolocation: "2",
     });
