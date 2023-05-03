@@ -4,10 +4,10 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "tsc --outDir dist && node ./dist/index.js"
+    "start": "tsc --outDir dist && node --no-warnings ./dist/index.js"
   },
   "dependencies": {
-    "@lavanet/lava-sdk": "^0.10.1",
+    "@lavanet/lava-sdk": "^0.10.2",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.11.10",
     "dotenv": "^16.0.3",

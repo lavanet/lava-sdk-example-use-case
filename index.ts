@@ -2,6 +2,7 @@ import {LavaSDK} from "@lavanet/lava-sdk"
 import {askForChoice, getUserInput} from "./user_inputs"
 import dotenv from 'dotenv';
 
+// Query Lava supported chains: using rest API: /lavanet/lava/spec/show_all_chains  
 
 const runAll = async () => {
   // load the .env file.
@@ -19,11 +20,14 @@ const runAll = async () => {
     const sdkClient  = await new LavaSDK({
       privateKey: process.env.subscribed_consumer1,
       chainID: `${choice}`, // chainID for abci_info query
-      geolocation: "2",
+      geolocation: "1",
     });
 
     // ask for an API to run
-    let api = await getUserInput()
+    // examples EVM: eth_chainId, eth_blockNumber
+    // examples Tendermint: abci_info, status
+
+    let api = await getUserInput() 
     console.log(`API to run ${api}\n`);
 
     // send the relay
@@ -31,7 +35,7 @@ const runAll = async () => {
     method: api,
     params: [],
   });
-  
+    
   // Parse and extract response
   const parsedInfo = JSON.parse(info).result;
   console.log("Result:", parsedInfo, "\n\n");
