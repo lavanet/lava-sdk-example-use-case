@@ -6,7 +6,7 @@ export async function askForChoice() {
         type: 'list',
         name: 'choice',
         message: 'Please choose a chain to query',
-        choices: ['LAV1', 'COS5', 'JUN1','COS3', 'ETH1', 'POLYGON1'],
+        choices: ["AVAX",'LAV1', 'COS5', 'JUN1','COS3', 'ETH1', 'POLYGON1'],
       },
     ]);
     return answers.choice;
