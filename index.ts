@@ -20,7 +20,7 @@ const runAll = async () => {
     const sdkClient  = await new LavaSDK({
       privateKey: process.env.subscribed_consumer1,
       chainID: `${choice}`, // chainID for abci_info query
-      geolocation: "1",
+      geolocation: "2",
     });
 
     // ask for an API to run
